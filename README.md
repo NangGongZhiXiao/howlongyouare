@@ -1,0 +1,11 @@
+# Android学习笔记 Javassist
+
+### 背景
+
+学习Javassist这个内容起因是wanAndroid知识星球的第一期作业（尝试用ASM或Javassist修改Java字节码），既不懂ASM也不懂Javassist，研究了一下发现ASM需要熟悉Java字节码，而自己对这方面不熟，所以选择了Javassist。
+
+### Gradle
+
+为什么上来先说Gradle？我们都知道Android最终的APK是由Gradle构建出来的，Gradle之前是Java源文件，Gradle之后是APK。那么对Java字节码的操作就得在Gradle中进行了，除非你不用Gradle来构建你的Android工程。
+
+那么怎么在Gradle中修改我们的字节码？首先看看Gradle的是如何工作的，我们在编译工程的时候会在build窗口看见一堆这样的输出：
